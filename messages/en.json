@@ -1,0 +1,133 @@
+{
+  "meta": {
+    "title": "Smart Contract Transaction Parser",
+    "description": "Decode and analyze EVM smart contract transactions across multiple chains. Parse function calls, parameters, and transaction details instantly."
+  },
+  "home": {
+    "heading": "Smart Contract Transaction Parser",
+    "subheading": "Decode function calls, input parameters, and transaction details from any EVM chain",
+    "inputPlaceholder": "Enter transaction hash (0x...)",
+    "chainLabel": "Select Chain",
+    "chainPlaceholder": "Choose a blockchain network",
+    "parseButton": "Parse Transaction",
+    "parsing": "Parsing...",
+    "supportedChains": "Supported Chains",
+    "features": {
+      "decode": "Function Decoding",
+      "decodeDesc": "Automatically decode function names and input parameters from calldata",
+      "multichain": "Multi-Chain Support",
+      "multichainDesc": "Support for Ethereum, BSC, Polygon, Arbitrum, Optimism, Base, and Avalanche",
+      "proxy": "Proxy Detection",
+      "proxyDesc": "Automatically detect proxy contracts and resolve implementation addresses"
+    }
+  },
+  "result": {
+    "title": "Transaction Details",
+    "functionName": "Function Name",
+    "functionSignature": "Function Signature",
+    "selector": "Selector",
+    "parameters": "Input Parameters",
+    "paramName": "Name",
+    "paramType": "Type",
+    "paramValue": "Value",
+    "paramFormatted": "Formatted (d18)",
+    "txInfo": "Transaction Info",
+    "from": "From",
+    "to": "To (Contract)",
+    "value": "Value",
+    "gasUsed": "Gas Used",
+    "gasPrice": "Gas Price",
+    "effectiveGasPrice": "Effective Gas Price",
+    "status": "Status",
+    "blockNumber": "Block Number",
+    "timestamp": "Timestamp",
+    "nonce": "Nonce",
+    "success": "Success",
+    "reverted": "Reverted",
+    "rawData": "Raw Calldata",
+    "abiSource": "ABI Source",
+    "abiSourceLabels": {
+      "etherscan": "Block Explorer (Verified)",
+      "sourcify": "Sourcify (Verified)",
+      "4bytes": "4bytes (Signature Only)",
+      "manual": "Manual Upload",
+      "none": "Not Found"
+    },
+    "proxyDetected": "Proxy contract detected",
+    "implementationAddress": "Implementation Address",
+    "contractCreation": "Contract Creation",
+    "deployedAddress": "Deployed Contract Address",
+    "viewOnExplorer": "View on Explorer",
+    "parseAnother": "Parse Another",
+    "expandAll": "Expand All",
+    "collapseAll": "Collapse All",
+    "noParams": "No input parameters"
+  },
+  "abiUpload": {
+    "title": "ABI Not Found",
+    "description": "The contract ABI could not be fetched automatically. You can paste the ABI JSON below to decode the transaction.",
+    "placeholder": "Paste contract ABI JSON here...",
+    "submit": "Decode with ABI",
+    "cancel": "Cancel"
+  },
+  "errors": {
+    "invalidHash": "Invalid transaction hash format. Expected 0x followed by 64 hex characters.",
+    "txNotFound": "Transaction not found on {chain}. Please verify the hash and selected chain.",
+    "abiNotFound": "Could not find contract ABI. You can paste it manually.",
+    "networkError": "Network error. Please check your connection and try again.",
+    "unsupportedChain": "This chain is not currently supported.",
+    "decodeFailed": "Failed to decode transaction data. The ABI may not match.",
+    "genericError": "An unexpected error occurred. Please try again."
+  },
+  "common": {
+    "loading": "Loading...",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "language": "Language",
+    "back": "Back",
+    "close": "Close"
+  },
+  "seo": {
+    "faq": {
+      "q1": "What is a smart contract transaction parser?",
+      "a1": "A smart contract transaction parser is a tool that decodes the raw calldata of EVM blockchain transactions, revealing the function name, input parameters (with names, types, and values), gas consumption, and execution status. It helps developers and analysts understand what a transaction actually did on-chain.",
+      "q2": "Which blockchains are supported?",
+      "a2": "We support 7 major EVM-compatible chains: Ethereum, BNB Smart Chain (BSC), Polygon, Arbitrum One, Optimism, Base, and Avalanche C-Chain. Each chain has automatic ABI resolution via block explorer APIs, Sourcify, and the 4bytes signature database.",
+      "q3": "How does automatic ABI resolution work?",
+      "a3": "The tool uses a waterfall pipeline to resolve contract ABIs: first it checks if the contract is a proxy and resolves the implementation, then tries the chain's block explorer API (Etherscan, etc.), followed by Sourcify's verified source repository, and finally the 4bytes function signature database. If all fail, you can manually paste the ABI."
+    },
+    "chainPage": {
+      "title": "{chain} Transaction Decoder | Smart Contract Parser",
+      "description": "Decode and analyze smart contract transactions on {chain}. Parse function calls, input parameters, gas usage and more instantly.",
+      "heading": "{chain} Transaction Decoder",
+      "subheading": "Decode and analyze smart contract transactions on {chain} with automatic ABI resolution",
+      "aboutTitle": "About {chain} Transaction Parsing",
+      "aboutText": "Our {chain} transaction decoder lets you paste any transaction hash to instantly decode the function call, input parameters, and execution details. The native currency is {symbol}. We automatically resolve contract ABIs through block explorer APIs, Sourcify, and the 4bytes signature database.",
+      "featuresTitle": "Features",
+      "features": {
+        "f1": "Automatic ABI resolution for {chain} verified contracts",
+        "f2": "Proxy contract detection (EIP-1967, EIP-1167) on {chain}",
+        "f3": "Full calldata decoding with parameter names and types",
+        "f4": "Token amount formatting with 18-decimal precision display"
+      },
+      "detailsTitle": "Chain Details",
+      "chainId": "Chain ID",
+      "nativeCurrency": "Native Currency",
+      "explorer": "Block Explorer"
+    },
+    "functionPage": {
+      "title": "{name} Function Decoder | {signature}",
+      "description": "Decode {name} ({signature}) function calls from smart contract transactions. Category: {category}. Parse parameters and values instantly.",
+      "heading": "{name} Function Decoder",
+      "subheading": "Decode {name} function calls in {category} smart contracts across all supported EVM chains",
+      "signatureTitle": "Function Signature",
+      "name": "Name",
+      "selector": "Selector",
+      "fullSig": "Signature",
+      "params": "Parameters",
+      "aboutTitle": "About {name}",
+      "aboutText": "The {name} function is commonly used in {category} smart contracts. Its full signature is {signature}. You can use this tool to decode any transaction that calls this function, viewing the exact parameter values passed on-chain.",
+      "chainsTitle": "Decode {name} on These Chains"
+    }
+  }
+}

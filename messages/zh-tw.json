@@ -1,0 +1,133 @@
+{
+  "meta": {
+    "title": "智慧合約交易解析器",
+    "description": "解碼和分析多條 EVM 鏈上的智慧合約交易。即時解析函數呼叫、參數和交易詳情。"
+  },
+  "home": {
+    "heading": "智慧合約交易解析器",
+    "subheading": "解碼任意 EVM 鏈上的函數呼叫、輸入參數和交易詳情",
+    "inputPlaceholder": "輸入交易雜湊 (0x...)",
+    "chainLabel": "選擇鏈",
+    "chainPlaceholder": "選擇區塊鏈網路",
+    "parseButton": "解析交易",
+    "parsing": "解析中...",
+    "supportedChains": "支援的鏈",
+    "features": {
+      "decode": "函數解碼",
+      "decodeDesc": "從 calldata 中自動解碼函數名稱和輸入參數",
+      "multichain": "多鏈支援",
+      "multichainDesc": "支援 Ethereum、BSC、Polygon、Arbitrum、Optimism、Base 和 Avalanche",
+      "proxy": "代理偵測",
+      "proxyDesc": "自動偵測代理合約並解析實作位址"
+    }
+  },
+  "result": {
+    "title": "交易詳情",
+    "functionName": "函數名稱",
+    "functionSignature": "函數簽名",
+    "selector": "選擇器",
+    "parameters": "輸入參數",
+    "paramName": "名稱",
+    "paramType": "類型",
+    "paramValue": "值",
+    "paramFormatted": "換算值 (d18)",
+    "txInfo": "交易資訊",
+    "from": "發送方",
+    "to": "接收方 (合約)",
+    "value": "轉帳金額",
+    "gasUsed": "Gas 消耗",
+    "gasPrice": "Gas 價格",
+    "effectiveGasPrice": "實際 Gas 價格",
+    "status": "狀態",
+    "blockNumber": "區塊高度",
+    "timestamp": "時間戳",
+    "nonce": "Nonce",
+    "success": "成功",
+    "reverted": "已回滾",
+    "rawData": "原始 Calldata",
+    "abiSource": "ABI 來源",
+    "abiSourceLabels": {
+      "etherscan": "區塊瀏覽器 (已驗證)",
+      "sourcify": "Sourcify (已驗證)",
+      "4bytes": "4bytes (僅簽名)",
+      "manual": "手動上傳",
+      "none": "未找到"
+    },
+    "proxyDetected": "偵測到代理合約",
+    "implementationAddress": "實作位址",
+    "contractCreation": "合約建立",
+    "deployedAddress": "已部署合約位址",
+    "viewOnExplorer": "在瀏覽器中查看",
+    "parseAnother": "解析另一筆",
+    "expandAll": "全部展開",
+    "collapseAll": "全部收起",
+    "noParams": "無輸入參數"
+  },
+  "abiUpload": {
+    "title": "未找到 ABI",
+    "description": "無法自動取得合約 ABI。你可以在下方貼上 ABI JSON 來解碼交易。",
+    "placeholder": "在此貼上合約 ABI JSON...",
+    "submit": "使用 ABI 解碼",
+    "cancel": "取消"
+  },
+  "errors": {
+    "invalidHash": "交易雜湊格式無效。應為 0x 開頭後跟 64 個十六進位字元。",
+    "txNotFound": "在 {chain} 上未找到此交易。請核實雜湊值和所選鏈。",
+    "abiNotFound": "未找到合約 ABI。你可以手動貼上。",
+    "networkError": "網路錯誤。請檢查網路連線後重試。",
+    "unsupportedChain": "目前不支援此鏈。",
+    "decodeFailed": "交易資料解碼失敗。ABI 可能不匹配。",
+    "genericError": "發生意外錯誤。請重試。"
+  },
+  "common": {
+    "loading": "載入中...",
+    "copy": "複製",
+    "copied": "已複製！",
+    "language": "語言",
+    "back": "返回",
+    "close": "關閉"
+  },
+  "seo": {
+    "faq": {
+      "q1": "什麼是智慧合約交易解析器？",
+      "a1": "智慧合約交易解析器是一款解碼 EVM 區塊鏈交易原始 calldata 的工具，能夠揭示函數名稱、輸入參數（包括名稱、類型和值）、Gas 消耗和執行狀態。它幫助開發者和分析師理解交易在鏈上的實際執行內容。",
+      "q2": "支援哪些區塊鏈？",
+      "a2": "我們支援 7 條主要的 EVM 相容鏈：Ethereum、BNB Smart Chain (BSC)、Polygon、Arbitrum One、Optimism、Base 和 Avalanche C-Chain。每條鏈都透過區塊瀏覽器 API、Sourcify 和 4bytes 簽名資料庫實現自動 ABI 解析。",
+      "q3": "自動 ABI 解析是如何運作的？",
+      "a3": "該工具使用瀑布式管線解析合約 ABI：首先偵測合約是否為代理並解析實作合約，然後嘗試鏈的區塊瀏覽器 API（Etherscan 等），接著查詢 Sourcify 的驗證源儲存庫，最後查詢 4bytes 函數簽名資料庫。如果全部失敗，你可以手動貼上 ABI。"
+    },
+    "chainPage": {
+      "title": "{chain} 交易解碼器 | 智慧合約解析",
+      "description": "在 {chain} 上解碼和分析智慧合約交易。即時解析函數呼叫、輸入參數、Gas 消耗等資訊。",
+      "heading": "{chain} 交易解碼器",
+      "subheading": "在 {chain} 上解碼和分析智慧合約交易，支援自動 ABI 解析",
+      "aboutTitle": "關於 {chain} 交易解析",
+      "aboutText": "我們的 {chain} 交易解碼器允許你貼上任何交易雜湊，即時解碼函數呼叫、輸入參數和執行詳情。原生代幣為 {symbol}。我們透過區塊瀏覽器 API、Sourcify 和 4bytes 簽名資料庫自動解析合約 ABI。",
+      "featuresTitle": "功能特性",
+      "features": {
+        "f1": "自動解析 {chain} 已驗證合約的 ABI",
+        "f2": "在 {chain} 上偵測代理合約（EIP-1967、EIP-1167）",
+        "f3": "完整的 calldata 解碼，包含參數名稱和類型",
+        "f4": "代幣金額格式化，支援 18 位精度顯示"
+      },
+      "detailsTitle": "鏈資訊",
+      "chainId": "鏈 ID",
+      "nativeCurrency": "原生代幣",
+      "explorer": "區塊瀏覽器"
+    },
+    "functionPage": {
+      "title": "{name} 函數解碼器 | {signature}",
+      "description": "解碼智慧合約交易中的 {name}（{signature}）函數呼叫。分類：{category}。即時解析參數和值。",
+      "heading": "{name} 函數解碼器",
+      "subheading": "在所有支援的 EVM 鏈上解碼 {category} 智慧合約中的 {name} 函數呼叫",
+      "signatureTitle": "函數簽名",
+      "name": "名稱",
+      "selector": "選擇器",
+      "fullSig": "簽名",
+      "params": "參數",
+      "aboutTitle": "關於 {name}",
+      "aboutText": "{name} 函數常用於 {category} 智慧合約中。其完整簽名為 {signature}。你可以使用此工具解碼任何呼叫此函數的交易，查看鏈上傳遞的確切參數值。",
+      "chainsTitle": "在這些鏈上解碼 {name}"
+    }
+  }
+}

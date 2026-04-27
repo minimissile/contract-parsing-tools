@@ -1,0 +1,133 @@
+{
+  "meta": {
+    "title": "智能合约交易解析器",
+    "description": "解码和分析多条EVM链上的智能合约交易。即时解析函数调用、参数和交易详情。"
+  },
+  "home": {
+    "heading": "智能合约交易解析器",
+    "subheading": "解码任意 EVM 链上的函数调用、输入参数和交易详情",
+    "inputPlaceholder": "输入交易哈希 (0x...)",
+    "chainLabel": "选择链",
+    "chainPlaceholder": "选择区块链网络",
+    "parseButton": "解析交易",
+    "parsing": "解析中...",
+    "supportedChains": "支持的链",
+    "features": {
+      "decode": "函数解码",
+      "decodeDesc": "从 calldata 中自动解码函数名称和输入参数",
+      "multichain": "多链支持",
+      "multichainDesc": "支持 Ethereum、BSC、Polygon、Arbitrum、Optimism、Base 和 Avalanche",
+      "proxy": "代理检测",
+      "proxyDesc": "自动检测代理合约并解析实现地址"
+    }
+  },
+  "result": {
+    "title": "交易详情",
+    "functionName": "函数名称",
+    "functionSignature": "函数签名",
+    "selector": "选择器",
+    "parameters": "输入参数",
+    "paramName": "名称",
+    "paramType": "类型",
+    "paramValue": "值",
+    "paramFormatted": "换算值 (d18)",
+    "txInfo": "交易信息",
+    "from": "发送方",
+    "to": "接收方 (合约)",
+    "value": "转账金额",
+    "gasUsed": "Gas 消耗",
+    "gasPrice": "Gas 价格",
+    "effectiveGasPrice": "实际 Gas 价格",
+    "status": "状态",
+    "blockNumber": "区块高度",
+    "timestamp": "时间戳",
+    "nonce": "Nonce",
+    "success": "成功",
+    "reverted": "已回滚",
+    "rawData": "原始 Calldata",
+    "abiSource": "ABI 来源",
+    "abiSourceLabels": {
+      "etherscan": "区块浏览器 (已验证)",
+      "sourcify": "Sourcify (已验证)",
+      "4bytes": "4bytes (仅签名)",
+      "manual": "手动上传",
+      "none": "未找到"
+    },
+    "proxyDetected": "检测到代理合约",
+    "implementationAddress": "实现地址",
+    "contractCreation": "合约创建",
+    "deployedAddress": "已部署合约地址",
+    "viewOnExplorer": "在浏览器中查看",
+    "parseAnother": "解析另一笔",
+    "expandAll": "全部展开",
+    "collapseAll": "全部收起",
+    "noParams": "无输入参数"
+  },
+  "abiUpload": {
+    "title": "未找到 ABI",
+    "description": "无法自动获取合约 ABI。你可以在下方粘贴 ABI JSON 来解码交易。",
+    "placeholder": "在此粘贴合约 ABI JSON...",
+    "submit": "使用 ABI 解码",
+    "cancel": "取消"
+  },
+  "errors": {
+    "invalidHash": "交易哈希格式无效。应为 0x 开头后跟 64 个十六进制字符。",
+    "txNotFound": "在 {chain} 上未找到此交易。请核实哈希值和所选链。",
+    "abiNotFound": "未找到合约 ABI。你可以手动粘贴。",
+    "networkError": "网络错误。请检查网络连接后重试。",
+    "unsupportedChain": "当前不支持此链。",
+    "decodeFailed": "交易数据解码失败。ABI 可能不匹配。",
+    "genericError": "发生意外错误。请重试。"
+  },
+  "common": {
+    "loading": "加载中...",
+    "copy": "复制",
+    "copied": "已复制！",
+    "language": "语言",
+    "back": "返回",
+    "close": "关闭"
+  },
+  "seo": {
+    "faq": {
+      "q1": "什么是智能合约交易解析器？",
+      "a1": "智能合约交易解析器是一款解码 EVM 区块链交易原始 calldata 的工具，能够揭示函数名称、输入参数（包括名称、类型和值）、Gas 消耗和执行状态。它帮助开发者和分析师理解交易在链上的实际执行内容。",
+      "q2": "支持哪些区块链？",
+      "a2": "我们支持 7 条主要的 EVM 兼容链：Ethereum、BNB Smart Chain (BSC)、Polygon、Arbitrum One、Optimism、Base 和 Avalanche C-Chain。每条链都通过区块浏览器 API、Sourcify 和 4bytes 签名数据库实现自动 ABI 解析。",
+      "q3": "自动 ABI 解析是如何工作的？",
+      "a3": "该工具使用瀑布式管线解析合约 ABI：首先检测合约是否为代理并解析实现合约，然后尝试链的区块浏览器 API（Etherscan 等），接着查询 Sourcify 的验证源仓库，最后查询 4bytes 函数签名数据库。如果全部失败，你可以手动粘贴 ABI。"
+    },
+    "chainPage": {
+      "title": "{chain} 交易解码器 | 智能合约解析",
+      "description": "在 {chain} 上解码和分析智能合约交易。即时解析函数调用、输入参数、Gas 消耗等信息。",
+      "heading": "{chain} 交易解码器",
+      "subheading": "在 {chain} 上解码和分析智能合约交易，支持自动 ABI 解析",
+      "aboutTitle": "关于 {chain} 交易解析",
+      "aboutText": "我们的 {chain} 交易解码器允许你粘贴任何交易哈希，即时解码函数调用、输入参数和执行详情。原生代币为 {symbol}。我们通过区块浏览器 API、Sourcify 和 4bytes 签名数据库自动解析合约 ABI。",
+      "featuresTitle": "功能特性",
+      "features": {
+        "f1": "自动解析 {chain} 已验证合约的 ABI",
+        "f2": "在 {chain} 上检测代理合约（EIP-1967、EIP-1167）",
+        "f3": "完整的 calldata 解码，包含参数名称和类型",
+        "f4": "代币金额格式化，支持 18 位精度显示"
+      },
+      "detailsTitle": "链信息",
+      "chainId": "链 ID",
+      "nativeCurrency": "原生代币",
+      "explorer": "区块浏览器"
+    },
+    "functionPage": {
+      "title": "{name} 函数解码器 | {signature}",
+      "description": "解码智能合约交易中的 {name}（{signature}）函数调用。分类：{category}。即时解析参数和值。",
+      "heading": "{name} 函数解码器",
+      "subheading": "在所有支持的 EVM 链上解码 {category} 智能合约中的 {name} 函数调用",
+      "signatureTitle": "函数签名",
+      "name": "名称",
+      "selector": "选择器",
+      "fullSig": "签名",
+      "params": "参数",
+      "aboutTitle": "关于 {name}",
+      "aboutText": "{name} 函数常用于 {category} 智能合约中。其完整签名为 {signature}。你可以使用此工具解码任何调用此函数的交易，查看链上传递的确切参数值。",
+      "chainsTitle": "在这些链上解码 {name}"
+    }
+  }
+}
