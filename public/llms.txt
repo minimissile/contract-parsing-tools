@@ -1,0 +1,64 @@
+# Smart Contract Transaction Parser
+
+> A free, open-source tool for decoding and analyzing EVM smart contract transactions across 7 major blockchain networks.
+
+## What This Tool Does
+
+Smart Contract Transaction Parser decodes the raw calldata of any EVM blockchain transaction, revealing:
+- Function name and selector (4-byte signature)
+- Input parameters with names, types, and decoded values
+- Gas consumption (gas used, gas price, effective gas price)
+- Transaction status (success/reverted), block number, and timestamp
+- Proxy contract detection and implementation address resolution
+
+## Supported Chains
+
+| Chain | Chain ID | Native Currency | Explorer |
+|-------|----------|----------------|----------|
+| Ethereum | 1 | ETH | etherscan.io |
+| BNB Smart Chain | 56 | BNB | bscscan.com |
+| Polygon | 137 | POL | polygonscan.com |
+| Arbitrum One | 42161 | ETH | arbiscan.io |
+| Optimism | 10 | ETH | optimistic.etherscan.io |
+| Base | 8453 | ETH | basescan.org |
+| Avalanche C-Chain | 43114 | AVAX | snowtrace.io |
+
+## How ABI Resolution Works
+
+The tool uses a waterfall pipeline to resolve contract ABIs automatically:
+1. **Proxy Detection** — Checks EIP-1967, EIP-1167, and OpenZeppelin legacy proxy patterns
+2. **Block Explorer API** — Fetches verified ABI from Etherscan-compatible APIs
+3. **Sourcify** — Queries Sourcify's verified source repository (full match, then partial match)
+4. **4bytes Directory** — Looks up function signature by 4-byte selector
+5. **Manual Upload** — User can paste ABI JSON as a fallback
+
+## Key Features
+
+- Automatic ABI resolution (no manual input required for verified contracts)
+- Proxy contract detection (EIP-1967 transparent proxy, EIP-1167 minimal proxy)
+- Token amount formatting with 18-decimal precision display
+- Raw hex value display alongside decoded values
+- Multi-language support (English, Simplified Chinese, Traditional Chinese)
+- Free to use, no registration required
+
+## Technology Stack
+
+- Next.js (App Router, SSG for SEO pages)
+- viem (EVM interaction, calldata decoding)
+- TypeScript, Tailwind CSS, shadcn/ui
+- next-intl (internationalization)
+
+## Pages
+
+- Homepage: /en, /zh, /zh-tw
+- Transaction Result: /[locale]/tx/[hash]?chain=[chainId]
+- Chain Pages: /[locale]/chains/ethereum, /[locale]/chains/bsc, etc.
+- Function Pages: /[locale]/functions/transfer, /[locale]/functions/approve, etc.
+
+## Pricing
+
+Free. $0. No registration required. No API key needed for end users.
+
+## Contact
+
+Website: https://txparser.dev

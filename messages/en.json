@@ -6,12 +6,30 @@
   "home": {
     "heading": "Smart Contract Transaction Parser",
     "subheading": "Decode function calls, input parameters, and transaction details from any EVM chain",
+    "definition": "A smart contract transaction parser is a free online tool that decodes the raw calldata (input data) of EVM blockchain transactions. It reveals the function name, input parameters with names and types, gas consumption, and execution status — helping developers and analysts understand exactly what happened on-chain.",
     "inputPlaceholder": "Enter transaction hash (0x...)",
     "chainLabel": "Select Chain",
     "chainPlaceholder": "Choose a blockchain network",
     "parseButton": "Parse Transaction",
     "parsing": "Parsing...",
     "supportedChains": "Supported Chains",
+    "howItWorks": "How It Works",
+    "steps": {
+      "s1title": "1. Paste Transaction Hash",
+      "s1desc": "Enter any transaction hash from Ethereum, BSC, Polygon, Arbitrum, Optimism, Base, or Avalanche.",
+      "s2title": "2. Automatic ABI Resolution",
+      "s2desc": "The tool resolves the contract ABI via Etherscan, Sourcify, 4bytes, or manual upload. Proxy contracts are detected automatically.",
+      "s3title": "3. View Decoded Results",
+      "s3desc": "See the function name, all input parameters (with names, types, and values), gas usage, execution status, and more."
+    },
+    "chainComparisonTitle": "Supported Chains Comparison",
+    "statsTitle": "By the Numbers",
+    "stats": {
+      "chains": "7 EVM chains supported",
+      "functions": "4,000+ function signatures in 4bytes database",
+      "abiSources": "4 automatic ABI resolution sources",
+      "languages": "3 languages (English, Chinese, Traditional Chinese)"
+    },
     "features": {
       "decode": "Function Decoding",
       "decodeDesc": "Automatically decode function names and input parameters from calldata",
@@ -19,7 +37,9 @@
       "multichainDesc": "Support for Ethereum, BSC, Polygon, Arbitrum, Optimism, Base, and Avalanche",
       "proxy": "Proxy Detection",
       "proxyDesc": "Automatically detect proxy contracts and resolve implementation addresses"
-    }
+    },
+    "faqTitle": "Frequently Asked Questions",
+    "lastUpdated": "Last updated: April 2026"
   },
   "result": {
     "title": "Transaction Details",

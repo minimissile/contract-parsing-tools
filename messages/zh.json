@@ -6,12 +6,30 @@
   "home": {
     "heading": "智能合约交易解析器",
     "subheading": "解码任意 EVM 链上的函数调用、输入参数和交易详情",
+    "definition": "智能合约交易解析器是一款免费的在线工具，用于解码 EVM 区块链交易的原始 calldata（输入数据）。它能揭示函数名称、带有名称和类型的输入参数、Gas 消耗以及执行状态——帮助开发者和分析师准确理解链上发生了什么。",
     "inputPlaceholder": "输入交易哈希 (0x...)",
     "chainLabel": "选择链",
     "chainPlaceholder": "选择区块链网络",
     "parseButton": "解析交易",
     "parsing": "解析中...",
     "supportedChains": "支持的链",
+    "howItWorks": "使用方法",
+    "steps": {
+      "s1title": "1. 粘贴交易哈希",
+      "s1desc": "输入来自 Ethereum、BSC、Polygon、Arbitrum、Optimism、Base 或 Avalanche 的任意交易哈希。",
+      "s2title": "2. 自动 ABI 解析",
+      "s2desc": "工具通过 Etherscan、Sourcify、4bytes 或手动上传自动解析合约 ABI。代理合约会被自动检测。",
+      "s3title": "3. 查看解码结果",
+      "s3desc": "查看函数名称、所有输入参数（含名称、类型和值）、Gas 消耗、执行状态等信息。"
+    },
+    "chainComparisonTitle": "支持链对比",
+    "statsTitle": "数据一览",
+    "stats": {
+      "chains": "支持 7 条 EVM 链",
+      "functions": "4bytes 数据库中超过 4,000 个函数签名",
+      "abiSources": "4 个自动 ABI 解析来源",
+      "languages": "3 种语言（英文、简体中文、繁体中文）"
+    },
     "features": {
       "decode": "函数解码",
       "decodeDesc": "从 calldata 中自动解码函数名称和输入参数",
@@ -19,7 +37,9 @@
       "multichainDesc": "支持 Ethereum、BSC、Polygon、Arbitrum、Optimism、Base 和 Avalanche",
       "proxy": "代理检测",
       "proxyDesc": "自动检测代理合约并解析实现地址"
-    }
+    },
+    "faqTitle": "常见问题",
+    "lastUpdated": "最后更新：2026 年 4 月"
   },
   "result": {
     "title": "交易详情",

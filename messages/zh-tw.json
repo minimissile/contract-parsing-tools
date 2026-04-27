@@ -6,12 +6,30 @@
   "home": {
     "heading": "智慧合約交易解析器",
     "subheading": "解碼任意 EVM 鏈上的函數呼叫、輸入參數和交易詳情",
+    "definition": "智慧合約交易解析器是一款免費的線上工具，用於解碼 EVM 區塊鏈交易的原始 calldata（輸入資料）。它能揭示函數名稱、帶有名稱和類型的輸入參數、Gas 消耗以及執行狀態——幫助開發者和分析師準確理解鏈上發生了什麼。",
     "inputPlaceholder": "輸入交易雜湊 (0x...)",
     "chainLabel": "選擇鏈",
     "chainPlaceholder": "選擇區塊鏈網路",
     "parseButton": "解析交易",
     "parsing": "解析中...",
     "supportedChains": "支援的鏈",
+    "howItWorks": "使用方法",
+    "steps": {
+      "s1title": "1. 貼上交易雜湊",
+      "s1desc": "輸入來自 Ethereum、BSC、Polygon、Arbitrum、Optimism、Base 或 Avalanche 的任意交易雜湊。",
+      "s2title": "2. 自動 ABI 解析",
+      "s2desc": "工具透過 Etherscan、Sourcify、4bytes 或手動上傳自動解析合約 ABI。代理合約會被自動偵測。",
+      "s3title": "3. 查看解碼結果",
+      "s3desc": "查看函數名稱、所有輸入參數（含名稱、類型和值）、Gas 消耗、執行狀態等資訊。"
+    },
+    "chainComparisonTitle": "支援鏈對比",
+    "statsTitle": "資料一覽",
+    "stats": {
+      "chains": "支援 7 條 EVM 鏈",
+      "functions": "4bytes 資料庫中超過 4,000 個函數簽名",
+      "abiSources": "4 個自動 ABI 解析來源",
+      "languages": "3 種語言（英文、簡體中文、繁體中文）"
+    },
     "features": {
       "decode": "函數解碼",
       "decodeDesc": "從 calldata 中自動解碼函數名稱和輸入參數",
@@ -19,7 +37,9 @@
       "multichainDesc": "支援 Ethereum、BSC、Polygon、Arbitrum、Optimism、Base 和 Avalanche",
       "proxy": "代理偵測",
       "proxyDesc": "自動偵測代理合約並解析實作位址"
-    }
+    },
+    "faqTitle": "常見問題",
+    "lastUpdated": "最後更新：2026 年 4 月"
   },
   "result": {
     "title": "交易詳情",

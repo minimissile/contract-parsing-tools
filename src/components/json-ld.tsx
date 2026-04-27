@@ -86,3 +86,44 @@ export function FAQJsonLd({
     />
   );
 }
+
+export function HowToJsonLd({
+  name,
+  steps,
+}: {
+  name: string;
+  steps: { name: string; text: string }[];
+}) {
+  return (
+    <JsonLd
+      data={{
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        name,
+        step: steps.map((s, i) => ({
+          "@type": "HowToStep",
+          position: i + 1,
+          name: s.name,
+          text: s.text,
+        })),
+      }}
+    />
+  );
+}
+
+export function OrganizationJsonLd() {
+  return (
+    <JsonLd
+      data={{
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "TxParser",
+        url: SITE_URL,
+        logo: `${SITE_URL}/icon.svg`,
+        sameAs: [],
+        description:
+          "Open-source smart contract transaction parsing tools for EVM blockchains.",
+      }}
+    />
+  );
+}
