@@ -5,7 +5,7 @@ import { CHAIN_CONFIGS } from "@/lib/chains/config";
  * falls back to localhost in development.
  */
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://txparser.dev";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://contract-parsing-tools.vercel.app";
 
 export const LOCALES = ["en", "zh", "zh-tw"] as const;
 export const DEFAULT_LOCALE = "en";

@@ -7,6 +7,7 @@ import { Toaster } from "sonner";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { OrganizationJsonLd } from "@/components/json-ld";
+import { Analytics } from "@vercel/analytics/react";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -52,6 +53,7 @@ export default async function LocaleLayout({
           <Footer />
           <Toaster position="top-right" />
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
